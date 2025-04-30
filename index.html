@@ -1,0 +1,91 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Earning - Rain BNB Business</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f2f2f2;
+            text-align: center;
+        }
+        header {
+            background: white;
+            padding: 20px;
+        }
+        header img {
+            max-width: 200px;
+        }
+        h1 {
+            color: #333;
+        }
+        .content {
+            padding: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: green;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.imgur.com/tXkU6SS.jpeg" alt="Mr Earning Logo">
+        <h1>Online Business - Rain BNB With Zaib</h1>
+    </header>
+
+    <div class="content page active" id="page1">
+        <p>Welcome to Mr Earning's Rain BNB Business. Discover how to earn passive income with our powerful network system. Click next to explore the complete plan.</p>
+        <button class="button" onclick="nextPage()">Next Page</button>
+    </div>
+
+    <div class="content page" id="page2">
+        <h2>Rain BNB Business Plan</h2>
+        <p>Rain BNB is a smart contract-based crypto earning system. It uses Binance Smart Chain (BNB) to create a sustainable and passive income model. You can earn by referring others and growing your team.</p>
+        <p>Features:</p>
+        <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+            <li>100% Decentralized</li>
+            <li>Instant Withdrawals</li>
+            <li>Transparent Smart Contract</li>
+            <li>Earn BNB Daily</li>
+        </ul>
+        <a href="#" class="button" onclick="agreeAction()">Yes, I Agree for this Business</a>
+    </div>
+
+    <div class="content page" id="page3">
+        <h2>Contact Zaib on WhatsApp</h2>
+        <p>To get started and join our team, click below to chat with Zaib directly on WhatsApp.</p>
+        <a href="https://wa.me/923301345700" class="button">Message Zaib on WhatsApp</a>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        function nextPage() {
+            document.getElementById(`page${currentPage}`).classList.remove('active');
+            currentPage++;
+            document.getElementById(`page${currentPage}`).classList.add('active');
+        }
+        function agreeAction() {
+            document.getElementById('page2').classList.remove('active');
+            document.getElementById('page3').classList.add('active');
+        }
+    </script>
+</body>
+</html>
